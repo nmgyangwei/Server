@@ -36,7 +36,13 @@ INetSessionMgr::~INetSessionMgr()
 	DeleteCriticalSection(&mNetworkCs);
 }
 
-bool UCAPI INetSessionMgr::LogText( const TCHAR* pszLog )
+bool UCAPI INetSessionMgr::LogText( const 
+#ifdef UNICODE
+    WCHAR
+#else
+    char
+#endif
+    *pszLog )
 {
 	USES_CONVERSION;
 	ELOG(LOG_DBBUG, W2A(pszLog));

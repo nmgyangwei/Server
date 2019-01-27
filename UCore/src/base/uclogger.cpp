@@ -158,15 +158,6 @@ void UCAPI CSDLogger::Debug(const char *format, ...)
 }
 #endif
 
-
-
-
-
-
-
-
-
-
 INT32	LOGTHRD_BUF_SIZE	= 256*1024;	// 线程缓冲队列大小
 UINT32	LOGTHRD_SLEEP_TIME	= 10;		// 线程空闲等待时间
 

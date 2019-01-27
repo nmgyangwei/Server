@@ -11,6 +11,7 @@
 #include <vector>
 //#include <ucdebug.h>
 #include <stdarg.h>
+#include <wchar.h>
 
 #if (defined(WIN32) || defined(WIN64))
 

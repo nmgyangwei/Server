@@ -66,7 +66,13 @@ namespace UCODE
              * @param pszLog : Pointer to the logs to be logged
              * @return returns true if log success, If the pszLog is NULL, LogText returns false
              */
-			virtual bool UCAPI LogText(const TCHAR* pszLog) = 0;
+			virtual bool UCAPI LogText(const 
+#ifdef UNICODE
+                WCHAR
+#else
+                char
+#endif
+                *pszLog) = 0;
 
             /**
              * @brief Log information in Binary format
@@ -238,30 +244,30 @@ namespace UCODE
              * @param pLogger : logger implementation
              */
 			void UCAPI SetLogger(ISDLogger* pLogger);
-
+#ifdef UNICODE
             /**
              * @brief log by LOGLV_CRITICAL
              * @param format : same as printf
              */
-			void UCAPI Critical(const TCHAR *format, ...);
+            UCODE_NET_FUN void UCAPI Critical(WCHAR const* format, ...);
 
             /**
              * @brief log by LOGLV_INFO
              * @param format : same as printf
              */
-			void UCAPI Info(const TCHAR *format, ...);
+            UCODE_NET_FUN void UCAPI Info(const WCHAR *format, ...);
 
             /**
              * @brief log by LOGLV_WARN
              * @param format : same as printf
              */
-			void UCAPI Warn(const TCHAR *format, ...);
+            UCODE_NET_FUN void UCAPI Warn(const WCHAR *format, ...);
 
             /**
              * @brief log by LOGLV_DEBUG
              * @param format : same as printf
              */
-			void UCAPI Debug(const TCHAR *format, ...);
+            UCODE_NET_FUN void UCAPI Debug(const WCHAR *format, ...);
 
             /**
              * @brief log by given log level
@@ -269,7 +275,14 @@ namespace UCODE
              * @param pszFormat : same as printf
              * @param argptr : parameter list
              */
-			void _Log(UINT32 dwLevel, const TCHAR *pszFormat, va_list argptr);
+			void _Log(UINT32 dwLevel, const WCHAR *pszFormat, va_list argptr);
+#else
+            void UCAPI Critical(char const* format, ...);
+            void UCAPI Info(const char *format, ...);
+            void UCAPI Warn(const char *format, ...);
+            void UCAPI Debug(const char *format, ...);
+            void _Log(UINT32 dwLevel, const char *pszFormat, va_list argptr);
+#endif // UNICODE
 		protected:    
 			const CHAR* m_aszLogPrefix[9]; ///< log prefix
 			ISDLogger* m_pLogger;          ///< log implementation

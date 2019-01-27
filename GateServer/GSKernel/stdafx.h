@@ -41,7 +41,7 @@
 #include <MMSystem.h>
 #include <atlconv.h>
 #include "..\..\ucore\include\net\ucnet.h"
-#include "ELoggingHeader.h"
+#include "..\ELogging\ELoggingHeader.h"
 #include "..\..\Share\logger.h"
 #include "Net\GSNetSessionMgr.h"
 #include "../../ThirdFunc/MsgLists/BSToGS.pb.h"

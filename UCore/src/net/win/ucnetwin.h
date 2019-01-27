@@ -1,5 +1,5 @@
-#ifndef UCODENETWIN_H
-#define UCODENETWIN_H
+#ifndef UCORENetWIN_H
+#define UCORENetWIN_H
 
 #include "ucnet.h"
 #include "ucsingleton.h"
@@ -12,18 +12,18 @@ using namespace UCODE;
 
 struct SendOutTimer;
 
-class CUCODENetWin : public IUCNet
+class CUCORENetWin : public IUCNet
 {
-	CUCODENetWin();
-	virtual ~CUCODENetWin();
+	CUCORENetWin();
+	virtual ~CUCORENetWin();
 
-	DECLARE_SINGLETON(CUCODENetWin)
+	DECLARE_SINGLETON(CUCORENetWin)
 
 public:
-	//Interface IUCODEBase
+	//Interface IUCOREBase
 	
 	/**
-	* @brief 增加对UCODENet的引用
+	* @brief 增加对UCORENet的引用
 	* @return void
 	*/
 	virtual void UCAPI AddRef(void);
@@ -35,7 +35,7 @@ public:
 	virtual UINT32  UCAPI QueryRef(void);
 
 	/**
-	* @brief 减少对UCODENet的引用,若引用为0,释放此类
+	* @brief 减少对UCORENet的引用,若引用为0,释放此类
 	* @return void
 	*/
 	virtual void UCAPI Release(void);
@@ -70,20 +70,20 @@ public:
 	virtual ISDListener*  UCAPI CreateListener(UINT32 dwNetIOType);
 
 	/**
-	* @brief 在主线程中运行UCODENet的逻辑操作
+	* @brief 在主线程中运行UCORENet的逻辑操作
 	* @param nCount : 此次运行的逻辑操作的个数
 	* @return bool : 是否运行了nCount个逻辑操作
 	*/
 	virtual bool UCAPI Run(INT32 nCount);
 
 	/**
-	* @brief 初始化UCODENet
+	* @brief 初始化UCORENet
 	* @return true为初始化成功,false为初始化失败
 	*/
 	bool Init();
 
 	/**
-	* @brief 清理UCODENet
+	* @brief 清理UCORENet
 	* @return true为清理成功,false为清理失败
 	*/
 	void Uninit();
@@ -102,7 +102,7 @@ public:
 
 	typedef std::vector<CCPSock * > ConnectedSockets; 
 
-#ifdef UCODENET_HAS_GATHER_SEND 
+#ifdef UCORENet_HAS_GATHER_SEND 
 	ConnectedSockets m_connSockets; 
     void FlushBufferedData()
 	{
@@ -124,25 +124,25 @@ public:
 
 protected:
 	/**
-	* @brief 创建UCODENet组件
+	* @brief 创建UCORENet组件
 	* @return 是否创建组件成功,true为成功,false为失败
 	*/
 	bool _CreateComponent();
 
 	/**
-	* @brief 初始化UCODENet组件
+	* @brief 初始化UCORENet组件
 	* @return 是否初始化组件成功,true为成功,false为失败
 	*/
 	bool _InitComponent();
 
 	/**
-	* @brief 清理UCODENet组件
+	* @brief 清理UCORENet组件
 	* @return void
 	*/
 	void _UninitComponent();
 
 	/**
-	* @brief 摧毁UCODENet组件
+	* @brief 摧毁UCORENet组件
 	* @return void
 	*/
 	void _DesroryComponent();

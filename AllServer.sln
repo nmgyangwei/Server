@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BalanceServer", "BalanceServer\BalanceServer\BalanceServer.vcxproj", "{BA3A1E20-EBAA-4437-8CFD-AB292A763DAC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C5FF4E1B-23D5-42F9-91DA-063A3855618B} = {C5FF4E1B-23D5-42F9-91DA-063A3855618B}
+		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5} = {F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B} = {2FCC1CD8-CE64-409F-9601-1A3F6601884B}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GSKernel", "GateServer\GSKernel\GSKernel.vcxproj", "{1EA99A92-D8F9-48B4-8A1C-8A23E16462DA}"
@@ -22,6 +26,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSBattleMgr", "CentralServe
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ELogging", "ELogging\ELogging\ELogging.vcxproj", "{C5FF4E1B-23D5-42F9-91DA-063A3855618B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1} = {C406DAEC-0886-4771-8DEA-9D7329B46CC1}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoginServer", "LoginServer\LoginServer\LoginServer.vcxproj", "{A4205769-2DEA-49BD-BE15-CA6F7A6AA7CF}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -35,9 +42,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogServer", "LogServer\LogS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbgLib", "Share\DbgLib\DbgLib.vcxproj", "{5E06B00E-DAB1-41D2-81B6-B3D0A31B7E49}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ucodenet", "UCore\project\win\ucodenet\ucodenet.vcxproj", "{2FCC1CD8-CE64-409F-9601-1A3F6601884B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxml", "ThirdFunc\tinyxml\tinyxml_lib.vcxproj", "{C406DAEC-0886-4771-8DEA-9D7329B46CC1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ucodebase", "UCore\project\win\ucodebase\ucodebase.vcxproj", "{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UCorebase", "UCore\project\win\ucorebase\ucorebase.vcxproj", "{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UCorenet", "UCore\project\win\ucorenet\ucorenet.vcxproj", "{2FCC1CD8-CE64-409F-9601-1A3F6601884B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,14 +120,14 @@ Global
 		{5E06B00E-DAB1-41D2-81B6-B3D0A31B7E49}.Release|Win32.Build.0 = Release|Win32
 		{5E06B00E-DAB1-41D2-81B6-B3D0A31B7E49}.Release|x64.ActiveCfg = Release|x64
 		{5E06B00E-DAB1-41D2-81B6-B3D0A31B7E49}.Release|x64.Build.0 = Release|x64
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|Win32.Build.0 = Debug|Win32
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|x64.ActiveCfg = Debug|x64
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|x64.Build.0 = Debug|x64
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|Win32.ActiveCfg = Release|Win32
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|Win32.Build.0 = Release|Win32
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|x64.ActiveCfg = Release|x64
-		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|x64.Build.0 = Release|x64
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|Win32.Build.0 = Debug|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|x64.ActiveCfg = Debug|x64
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|x64.Build.0 = Debug|x64
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|Win32.ActiveCfg = Release|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|Win32.Build.0 = Release|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|x64.ActiveCfg = Release|x64
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|x64.Build.0 = Release|x64
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Debug|Win32.Build.0 = Debug|Win32
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Debug|x64.ActiveCfg = Debug|x64
@@ -127,9 +136,20 @@ Global
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Release|Win32.Build.0 = Release|Win32
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Release|x64.ActiveCfg = Release|x64
 		{F5DC0C1D-AAF9-4388-BFE7-084369AF65A5}.Release|x64.Build.0 = Release|x64
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|Win32.Build.0 = Debug|Win32
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|x64.ActiveCfg = Debug|x64
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Debug|x64.Build.0 = Debug|x64
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|Win32.ActiveCfg = Release|Win32
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|Win32.Build.0 = Release|Win32
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|x64.ActiveCfg = Release|x64
+		{2FCC1CD8-CE64-409F-9601-1A3F6601884B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {623AA743-BF86-478F-8497-B1E18E53BD07}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}

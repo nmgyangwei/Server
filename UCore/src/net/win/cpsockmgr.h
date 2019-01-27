@@ -54,7 +54,7 @@ public:
 	//void DelayRelease(CCPSock* poSock);
 	//void CheckDelayRelease();
 
-#if UCODENet_Has_CollectBuffer_BeforeSend
+#if UCORENet_Has_CollectBuffer_BeforeSend
     void OnSendOut();
     std::set<CCPSock*>      m_oSendSockList;
 #endif

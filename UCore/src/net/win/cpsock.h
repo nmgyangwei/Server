@@ -208,7 +208,7 @@ public:
 	*/
 	void DoClose();
 
-#ifdef UCODENET_HAS_GATHER_SEND 
+#ifdef UCORENet_HAS_GATHER_SEND 
 	Condition             m_sendCond; 
 	void    OnSendOut();
 	volatile UINT32  m_hasCollectSent;	

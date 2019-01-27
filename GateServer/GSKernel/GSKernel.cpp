@@ -4,8 +4,8 @@
 #include <fstream>
 #include "../../ThirdFunc/MsgLists/BSToGS.pb.h"
 #include "../../ThirdFunc/MsgLists/GSToBS.pb.h"
-#include "tinyxml.h" 
-#include "tinystr.h"
+#include "../../ThirdFunc/tinyxml/tinyxml.h" 
+#include "../../ThirdFunc/tinyxml/tinystr.h"
 
 using namespace std;
 

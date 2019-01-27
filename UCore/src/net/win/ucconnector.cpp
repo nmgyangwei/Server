@@ -87,7 +87,7 @@ bool CUCODEConnector::ReConnect(void)
 
 void CUCODEConnector::Release(void)
 {
-	CUCODENetWin::Instance()->ReleaseConnector(this);
+	CUCORENetWin::Instance()->ReleaseConnector(this);
 }
 
 void CUCODEConnector::OnConnect()
